@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <main class=" mt-12 w-3/4 mx-auto">
+        <h1 class="text-5xl text-center ">Your are in <span class="text-red-400">Baaper Bank</span>!!!</h1>
+        <!-- money box area  -->
+        <section class="grid grid-cols-3 gap-4 mt-16">
+            <!-- deposit  -->
+            <div class="bg-green-500 p-8 rounded-xl">
+                <h4 class="text-3xl text-white mb-3">Deposit</h4>
+                <h3 class="text-5xl text-white">$<span id="deposit-box">00</span></h3>
+            </div>
+            <!-- withdraw -->
+            <div class="bg-yellow-500 p-8 rounded-xl">
+                <h4 class="text-3xl text-white mb-3">withdraw</h4>
+                <h3 class="text-5xl text-white">$<span id="withdraw-box">00</span></h3>
+            </div>
+            <!-- balance -->
+            <div class="bg-pink-500 p-8 rounded-xl">
+                <h4 class="text-3xl text-white mb-3">Balance</h4>
+                <h3 class="text-5xl text-white">$<span id="balance-box">00</span></h3>
+            </div>
+        </section>
+        <!-- money input area  -->
+        <section class="grid grid-cols-2 gap-4 mt-6">
+            <!-- money deposit input area -->
+            <div class="p-6 bg-red-400 rounded-xl">
+                <h5 class="text-3xl text-white">Please Deposit</h5>
+                <input id="deposit-input" class="block w-3/4 mb-4 mt-4 px-2 py-1.5 rounded" type="text">
+                <button class="bg-green-500 font-medium text-white px-3 py-2 rounded"
+                    id="deposit_btn" onclick="updateBox(depositBox, depositInput);updateBalance(depositInput, true);">Deposit</button>
+    
+            </div>
+            <!-- money withdraw input area -->
+            <div class="p-6 bg-blue-400 rounded-xl">
+                <h5 class="text-3xl text-white">Please withdraw</h5>
+                <input id="withdraw-input" class="block w-3/4 mb-4 mt-4 px-2 py-1.5 rounded" type="text">
+                <button class="bg-red-500 font-medium text-white px-3 py-2 rounded"
+                    id="withdraw-btn" onclick=" updateBox(withdrawBox, withdrawInput);
+    updateBalance(withdrawInput, false);" >withdraw</button>
+    
+            </div>
+        </section>
+    </main>
+    <script src="innerJs.js"></script>
+</body>
+</html>
